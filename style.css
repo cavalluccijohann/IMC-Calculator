@@ -1,0 +1,334 @@
+:root {
+    --color-red: #b63333;
+    --color-green: #1bc100;
+    --color-yellow: #ff9900;
+    --color-grey: #1E1E1E;
+}
+
+
+body {
+    background-color: var(--color-grey);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr 0.5fr 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Header Header Header Header Header Header Header Header Header"
+    ". . Info Info Info Info Info . ."
+    ". . Info Info Info Info Info . ."
+    ". IMC IMC IMC IMC IMC IMC IMC ."
+    ". IMC IMC IMC IMC IMC IMC IMC ."
+    ". IMC IMC IMC IMC IMC IMC IMC ."
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    "Footer Footer Footer Footer Footer Footer Footer Footer Footer";
+}
+
+.Header { grid-area: Header; }
+
+.Info { grid-area: Info; }
+
+.IMC { grid-area: IMC; }
+
+.Footer { grid-area: Footer; }
+
+
+/*----------------- HEADER -----------------*/
+
+header {
+    background-color: var(--color-grey);
+    width: 100%;
+    grid-area: Header;
+}
+.header_div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.link_div {
+    width: 50%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+.link_selected {
+    color: var(--color-green);
+    text-decoration: underline;
+}
+.link_propos:hover {
+    color: var(--color-yellow);
+}
+.link_contact:hover {
+    color: var(--color-red);
+}
+
+.logo_div {
+    width: 10%;
+}
+
+.logo {
+    width: 100%;
+}
+
+/*----------------- END HEADER -----------------*/
+
+.rect_separate {
+    width: 100%;
+    height: 5px;
+    background: rgb(27,193,0);
+    background: linear-gradient(90deg, rgba(27,193,0,1) 10%, rgba(255,153,0,1) 50%, rgba(182,51,51,1) 90%);
+}
+
+/*----------------- INFO -----------------*/
+
+.Info {
+    width: 100%;
+    height: auto;
+    grid-area: Info;
+    margin-top: 20px;
+
+}
+
+.rect_info {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--color-yellow);
+    border-radius: 20px;
+
+}
+
+.info_title {
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-yellow);
+    margin-bottom: 10px;
+    /*center text*/
+    text-align: center;
+}
+
+.info_text {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*----------------- END INFO -----------------*/
+
+
+
+/*----------------- IMC -----------------*/
+
+.IMC {
+    width: 100%;
+    height: 500px;
+    grid-area: IMC;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+
+}
+
+.title_imc {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-yellow);
+    margin-bottom: 10px;
+    /*degrade verticale text*/
+    background: linear-gradient(90deg, rgba(27,193,0,1) 10%, rgba(255,153,0,1) 50%, rgba(182,51,51,1) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content_imc {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.form_div {
+    width: 25%;
+    height: 200px;
+    background: antiquewhite;
+}
+
+.input {
+    width: 75%;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--color-yellow);
+    background-color: #D9D9D9;
+    font-weight: bold;
+    font-size: 14px;
+}
+.input_age {
+    color: var(--color-red);
+}
+
+.input_taille {
+    color: var(--color-green);
+}
+
+.input_poids {
+    color: var(--color-yellow);
+}
+
+.input_age::placeholder {
+    color: var(--color-red);
+    opacity: 50%;
+}
+
+.input_taille::placeholder {
+    color: var(--color-green);
+    opacity: 50%;
+}
+
+.input_poids::placeholder {
+    color: var(--color-yellow);
+    opacity: 50%;
+
+}
+
+.gauge_div {
+    width: 500px;
+    height: 500px;
+    background: var(--color-grey);
+}
+
+.gauge {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.progress {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: .1rem solid #fff;
+    border-bottom: .1rem solid var(--color-grey);
+    border-radius: 50%;
+    outline: .2rem solid #fff;
+    outline-offset: .4rem;
+    overflow: hidden;
+}
+
+.progress::before {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background: var(--color-grey);
+    z-index: 200;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    height: 50%;
+    top : 50%;
+    width: 100%;
+    background: var(--color-grey);
+
+
+}
+
+.bar {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: var(--color-green);
+    transform:rotate(-180deg);
+    transform-origin: bottom center;
+    /*animation: rotate 2s ease-in-out;*/
+}
+
+.needle {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: white!important;
+    clip-path: polygon(50% 0%, 50% 0%, 52% 100%, 48% 100%);
+    transform: rotate(-90deg);
+    transform-origin: bottom center;
+    z-index: 300;
+}
+
+.msg {
+   margin-top: 100px;
+    font: 1.5rem 'Roboto', sans-serif;
+}
+.process, .success {
+   transform: translateY(120px);
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.process.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.sucess.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-180deg);
+        background: var(--color-green);
+    }
+    50% {
+        background: var(--color-yellow);
+    }
+    80% {
+        background: var(--color-red);
+    }
+}
+
+/*----------------- END IMC -----------------*/

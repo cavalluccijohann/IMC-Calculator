@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <header>
+        <div class="header_div">
+            <div class="logo_div">
+                <img class="logo" src="src/logo1.png" alt="logo">
+            </div>
+            <div class="link_div">
+                <a href="index.html" class="link link_selected">Accueil</a>
+                <a href="" class="link link_propos">À Propos</a>
+                <a href="" class="link link_contact">Contact</a>
+            </div>
+        </div>
+        <div class="rect_separate"></div>
+    </header>
+
+    <div class="Info">
+        <div class="rect_info">
+            <div class="rect_info_text">
+                <h1 class="info_title">Qu'es ce que <span class="info_title_span">l'IMC ?</span></h1>
+                <p class="info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt luctus, nunc nisl aliquet nisl, vel aliquet nisl nisl sit amet nisl. Sed euismod, nunc vel tincidunt luctus, nunc nisl aliquet nisl, vel aliquet nisl nisl sit amet nisl.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="IMC">
+        <div class="title_imc">
+            <h1 class="title_imc_h1">Calculer votre IMC</h1>
+        </div>
+        <div class="content_imc">
+
+            <div class="gauge_div">
+                <div class="gauge">
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="needle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form_div">
+                <!-- create 3 forms Taille, poids, age onclick="myFunction()"-->
+                <form action="" method="post" class="form">
+                    <div class="form_div1">
+                        <input type="text" name="taille" id="taille" class="input input_taille" placeholder="Taille ( cm )">
+                    </div>
+                    <div class="form_div2">
+                        <input type="text" name="poids" id="poids" class="input input_poids" placeholder="Poids ( kg )">
+                    </div>
+                    <div class="form_div3">
+                        <button type="button" id="btn" class="input input_age" onclick="start" >Try it</button>
+
+                    </div>
+                    <p id="demo"></p>
+                </form>
+                <script src="app.js"></script>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
