@@ -3,6 +3,7 @@
     --color-green: #1bc100;
     --color-yellow: #ff9900;
     --color-grey: #1E1E1E;
+    --color-blue: rgba(0, 159, 217, 0.63);
 }
 
 
@@ -88,7 +89,8 @@ header {
 }
 
 .logo_div {
-    width: 10%;
+    padding-left: 10px;
+    width: 4%;
 }
 
 .logo {
@@ -138,6 +140,75 @@ header {
     margin-bottom: 10px;
     text-align: center;
 }
+
+.legende_div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+.legende_left {
+    width: 50%;
+    display: flex;
+    flex-direction: Column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: start;
+    align-content: stretch;
+}
+
+.legende_right {
+    width: 50%;
+    display: flex;
+    flex-direction: Column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: start;
+    align-content: stretch;
+}
+
+.legende {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: start;
+    align-content: stretch;
+}
+
+.color_legende {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 5%;
+}
+.legende_text {
+    margin: 0px;
+    color: white;
+}
+
+.red {
+    background-color: var(--color-red);
+}
+.yellow {
+    background-color: var(--color-yellow);
+}
+.green {
+    background-color: var(--color-green);
+}
+.blue {
+    background-color: var(--color-blue);
+}
+
 /*----------------- END INFO -----------------*/
 
 
@@ -162,6 +233,7 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: var(--color-yellow);
+    margin-top: 50px;
     margin-bottom: 10px;
     /*degrade verticale text*/
     background: linear-gradient(90deg, rgba(27,193,0,1) 10%, rgba(255,153,0,1) 50%, rgba(182,51,51,1) 90%);
@@ -175,7 +247,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     align-content: stretch;
 }
@@ -227,11 +299,11 @@ header {
 }
 
 .gauge_div {
-    width: 500px;
+    width: 200px;
     height: 500px;
     background: var(--color-grey);
 }
-
+/*
 .gauge {
     width: 100%;
     height: 100%;
@@ -282,7 +354,7 @@ header {
     background: var(--color-green);
     transform:rotate(-180deg);
     transform-origin: bottom center;
-    /*animation: rotate 2s ease-in-out;*/
+
 }
 
 .needle {
@@ -330,5 +402,86 @@ header {
         background: var(--color-red);
     }
 }
+*/
+.gauge {
+    width: 100%;
+    height: 100%;
+}
+
+.bar {
+    height: 100%;
+    width: 100px;
+    transform:rotate(-180deg);
+    background: linear-gradient(180deg, rgba(27,193,0,1) 30%, rgba(255,153,0,1) 50%, rgba(182,51,51,1) 90%);
+    opacity: 100%;
+}
+.bar_inside {
+    height: 100%;
+    width: 100%;
+    background: #1E1E1E;
+    transform:rotate(-180deg);
+    opacity:70%;
+    /* position bottom*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.result_div {
+    width: 35%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    align-content: stretch;
+
+
+}
+.imc_number {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+
+.rect_result {
+    display: none;
+    width: 75%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 20px;
+}
+
+.title_result {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.result_imc_red {
+    display: none;
+    color: var(--color-red);
+}
+.result_imc_yellow {
+    display: none;
+    color: var(--color-yellow);
+}
+.result_imc_green {
+    display: none;
+    color: var(--color-green);
+}
+.result_imc_low {
+    display: none;
+    color: var(--color-red);
+}
+
 
 /*----------------- END IMC -----------------*/

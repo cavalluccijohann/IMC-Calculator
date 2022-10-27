@@ -24,7 +24,41 @@
         <div class="rect_info">
             <div class="rect_info_text">
                 <h1 class="info_title">Qu'es ce que <span class="info_title_span">l'IMC ?</span></h1>
-                <p class="info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt luctus, nunc nisl aliquet nisl, vel aliquet nisl nisl sit amet nisl. Sed euismod, nunc vel tincidunt luctus, nunc nisl aliquet nisl, vel aliquet nisl nisl sit amet nisl.</p>
+                <p class="info_text">L'IMC correspond à l'indice de masse corporelle. Il est défini selon la formule suivante :</p>
+                <div class="legende_div">
+                    <div class="legende_left">
+                        <div class="legende">
+                            <div class="color_legende blue" ></div>
+                            <p class="legende_text">< 16,5 : Maigreur morbide</p>
+                        </div>
+                        <div class="legende">
+                            <div class="color_legende blue"></div>
+                            <p class="legende_text">16,5 - 18,5 : Maigreur</p>
+                        </div>
+                        <div class="legende">
+                            <div class="color_legende green"></div>
+                            <p class="legende_text">18,5 - 25 : Poids normal</p>
+                        </div>
+                        <div class="legende">
+                            <div class="color_legende yellow"></div>
+                            <p class="legende_text">25 - 30 : Surpoids</p>
+                        </div>
+                    </div>
+                    <div class="legende_right">
+                        <div class="legende">
+                            <div class="color_legende red"></div>
+                            <p class="legende_text">30 - 35 : Obésité de grade 1 (ou "obésité simple")</p>
+                        </div>
+                        <div class="legende">
+                            <div class="color_legende red"></div>
+                            <p class="legende_text">35 - 40 : Obésité de grade 2 (ou "obésité sévère")</p>
+                        </div>
+                        <div class="legende">
+                            <div class="color_legende red"></div>
+                            <p class="legende_text">> 40 : Obésité de grade 3 (ou "obésité massive/morbide")</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -34,17 +68,37 @@
             <h1 class="title_imc_h1">Calculer votre IMC</h1>
         </div>
         <div class="content_imc">
-
             <div class="gauge_div">
                 <div class="gauge">
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="needle"></div>
+                    <div class="bar">
+                        <div class="bar_inside"></div>
                     </div>
+
                 </div>
             </div>
-            <div class="form_div">
-                <!-- create 3 forms Taille, poids, age onclick="myFunction()"-->
+            <div class="result_div">
+                <p class="title_result">Votre IMC est de : </p>
+                <p id="demo" class="imc_number"></p>
+                <div class="rect_result">
+                    <p class="result_imc_red">Votre excès de poids correspond à une obésité. Cet état peut avoir des conséquences sur votre santé. Votre principal objectif est de stopper la prise de poids et de débuter un amaigrissement modéré et progressif. Votre médecin traitant et/ou une diététicienne agréée pourra vous aider. Vous pouvez commencer par augmenter votre activité physique quotidienne et modifier vos habitudes alimentaires. Mais attention aux régimes trop restrictifs qui risquent, à terme, d'entraîner une reprise de poids plus importante (effet yoyo).</p>
+                    <p class="result_imc_yellow">Vous êtes en surpoids. Afin d'éviter les problèmes de santé, votre principal objectif est de ne pas prendre de poids, en équilibrant votre alimentation et en augmentant votre activité physique au quotidien. Vous pouvez être aidé(e) par votre médecin traitant ou par une diététicienne agréée. Mais attention aux régimes trop restrictifs qui risquent, à terme, d'entraîner une reprise de poids plus importante (effet yoyo).</p>
+                    <p class="result_imc_green">Votre poids est « normal ». Il n'y a pas d'indication médicale à perdre du poids. La pratique d'une activité physique régulière et une alimentation équilibrée vous aideront à maintenir votre poids et votre santé.</p>
+                    <p class="result_imc_low">Votre poids est faible par rapport à votre taille. Discutez-en avec votre médecin traitant afin de vérifier l'absence de problème de santé.</p>
+                </div>
+
+            </div>
+            <!--
+                        <div class="gauge_div">
+                            <div class="gauge">
+                                <div class="progress">
+                                    <div class="bar"></div>
+                                    <div class="needle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_div">
+                        -->
+                            <!-- create 3 forms Taille, poids, age onclick="myFunction()"-->
                 <form action="" method="post" class="form">
                     <div class="form_div1">
                         <input type="text" name="taille" id="taille" class="input input_taille" placeholder="Taille ( cm )">
@@ -56,7 +110,7 @@
                         <button type="button" id="btn" class="input input_age" onclick="start" >Try it</button>
 
                     </div>
-                    <p id="demo"></p>
+
                 </form>
                 <script src="app.js"></script>
 
