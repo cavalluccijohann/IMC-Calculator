@@ -8,4 +8,3 @@ I've choose to create a IMC calculator because it's a simple and easy to underst
 
 So for use this exemple you just have to enter your weight and your height and the gauge will show you your IMC. 📊
 
-just
